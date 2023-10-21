@@ -22,53 +22,14 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
-import theme.MyDietTheme
+import ui.home.HomeScreen
+import ui.theme.MyDietTheme
 
 @OptIn(ExperimentalResourceApi::class)
 @Composable
 fun App() {
     MyDietTheme {
-        Scaffold(
-            topBar = {
-                TopAppBar(
-                    backgroundColor = MaterialTheme.colors.background,
-                    elevation = 0.dp,
-                ) {
-                    Box(
-                        modifier = Modifier.fillMaxSize(),
-                        contentAlignment = Alignment.Center,
-                    ) {
-                        Image(
-                            painterResource("toolbar-logo.xml"),
-                            null,
-                            modifier = Modifier
-                                .fillMaxHeight(0.5f),
-                        )
-                    }
-                }
-            },
-        ) {
-            var greetingText by remember { mutableStateOf("Hello, World!") }
-            var showImage by remember { mutableStateOf(false) }
-            Column(
-                Modifier.fillMaxWidth()
-                    .padding(it),
-                horizontalAlignment = Alignment.CenterHorizontally,
-            ) {
-                Button(onClick = {
-                    greetingText = "Hello, ${getPlatformName()}"
-                    showImage = !showImage
-                }) {
-                    Text(greetingText)
-                }
-                AnimatedVisibility(showImage) {
-                    Image(
-                        painterResource("toolbar-logo.xml"),
-                        null,
-                    )
-                }
-            }
-        }
+        HomeScreen()
     }
 }
 

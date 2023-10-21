@@ -26,6 +26,10 @@ kotlin {
                 implementation(compose.material)
                 @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
                 implementation(compose.components.resources)
+                api("dev.icerock.moko:mvvm-core:0.16.1")
+                api("dev.icerock.moko:mvvm-flow:0.16.1")
+                api("dev.icerock.moko:mvvm-compose:0.16.1")
+                api("dev.icerock.moko:mvvm-flow-compose:0.16.1")
             }
         }
         val androidMain by getting {
