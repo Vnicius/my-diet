@@ -24,18 +24,17 @@ actual fun setStatusBarColor(color: Color, isDark: Boolean) {
         ),
     )
 
-    runCatching {
-        UIApplication
-            .sharedApplication
-            .keyWindow
-            ?.windowScene
-            ?.statusBarManager
-            ?.statusBarFrame()?.let {
-                UIView(it)
-            }?.apply {
-                setBackgroundColor(statusBarColor)
-            }?.let {
-                UIApplication.sharedApplication.keyWindow?.addSubview(it)
-            }
-    }
+    UIApplication
+        .sharedApplication
+        .keyWindow
+        ?.windowScene
+        ?.statusBarManager
+        ?.statusBarFrame()
+        ?.let {
+            UIView(it)
+        }?.apply {
+            setBackgroundColor(statusBarColor)
+        }?.let {
+            UIApplication.sharedApplication.keyWindow?.addSubview(it)
+        }
 }
