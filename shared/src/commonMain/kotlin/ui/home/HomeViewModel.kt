@@ -25,6 +25,26 @@ class HomeViewModel : ViewModel() {
                         title = "Lanche da manhã",
                         periodColorScheme = PeriodColorScheme.MorningSnack,
                     ),
+                    HomeUiState.PeriodCardState(
+                        time = "13:00",
+                        title = "Almoço",
+                        periodColorScheme = PeriodColorScheme.Lunch,
+                    ),
+                    HomeUiState.PeriodCardState(
+                        time = "16:00",
+                        title = "Lanche da tarde",
+                        periodColorScheme = PeriodColorScheme.AfternoonSnack,
+                    ),
+                    HomeUiState.PeriodCardState(
+                        time = "19:00",
+                        title = "Jantar",
+                        periodColorScheme = PeriodColorScheme.Diner,
+                    ),
+                    HomeUiState.PeriodCardState(
+                        time = "22:00",
+                        title = "Lanche da noite",
+                        periodColorScheme = PeriodColorScheme.LateNightSnack,
+                    ),
                 ),
             )
         }
