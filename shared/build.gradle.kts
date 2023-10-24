@@ -30,6 +30,7 @@ kotlin {
                 api("dev.icerock.moko:mvvm-flow:0.16.1")
                 api("dev.icerock.moko:mvvm-compose:0.16.1")
                 api("dev.icerock.moko:mvvm-flow-compose:0.16.1")
+                implementation("dev.chrisbanes.material3:material3-window-size-class-multiplatform:0.3.1")
             }
         }
         val androidMain by getting {
