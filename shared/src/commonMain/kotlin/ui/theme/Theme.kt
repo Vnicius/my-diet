@@ -51,6 +51,9 @@ fun PeriodCardTheme(
     content: @Composable () -> Unit,
 ) {
     val colorScheme = MaterialTheme.colors.copy(
+        primary = periodColorScheme.primary,
+        primaryVariant = periodColorScheme.primaryVariant,
+        secondary = periodColorScheme.secondary,
         surface = periodColorScheme.surfaceColor,
     )
 
